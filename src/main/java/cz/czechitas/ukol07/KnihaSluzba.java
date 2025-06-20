@@ -30,10 +30,11 @@ public class KnihaSluzba {
         }
     }
 
-    public List<Kniha> nacistSeznamKnih(String nazev) {
-        List<Kniha> seznamKnih = new ArrayList<>();
-        return knihy; //nebo return seznamKnihy;
+    public List<Kniha> nacistSeznamKnih () {
+        //List<Kniha> seznamKnih = new ArrayList<>();
+        return knihy; //nebo return knihy;
     }
+
     public List<Kniha> nacistKnihyAutora(String autor) {
         List<Kniha> knihyAutora = new ArrayList<>();
         for (Kniha kniha : knihy) {
@@ -48,7 +49,8 @@ public class KnihaSluzba {
         List<Kniha> rokVydani = new ArrayList<>();
         for (Kniha kniha : knihy) {
             if (kniha.getRokVydani() == rok) {
-                rokVydani.add(kniha);           }
+                rokVydani.add(kniha);
+            }
         }
         return rokVydani;
     }

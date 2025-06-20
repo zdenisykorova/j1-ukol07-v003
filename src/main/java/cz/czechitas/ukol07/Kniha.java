@@ -5,6 +5,8 @@ public class Kniha {
     private String nazev;
     private int rokVydani;
 
+    public Kniha() {}
+
     public Kniha(String autor, String nazev, int rokVydani) {
         this.autor = autor;
         this.nazev = nazev;
@@ -28,4 +30,10 @@ public class Kniha {
     public void setRokVydani(int rokVydani) {
         this.rokVydani = rokVydani;
     }
+
+    @Override
+    public String toString() {
+        return nazev + "," + autor + "," + rokVydani + ";";
+    }
+
 }
