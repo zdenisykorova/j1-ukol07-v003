@@ -23,7 +23,7 @@ public class KnihaSluzba {
             if (inputStream == null) {
                 throw new FileNotFoundException("Soubor nenalezen.");
             }
-            knihy = objectMapper.readValue(inputStream, newTypeReference<List<Kniha>>() {
+            knihy = objectMapper.readValue(inputStream, new TypeReference<List<Kniha>>() {
             });
         }
     }
