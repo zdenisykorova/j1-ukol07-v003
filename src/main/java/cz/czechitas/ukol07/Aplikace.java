@@ -16,12 +16,17 @@ public class Aplikace {
         int pocetKnih = knihaSluzba.nacistSeznamKnih().size();
         System.out.println("Počet knih v databázi: " + pocetKnih);
 
-        //knihaSluzba.nacistKnihyAutora("Karel Čapek");
-        System.out.println(knihaSluzba.nacistKnihyAutora("Karel Čapek"));
 
-        //knihaSluzba.nacistKnihyRokVydani(1845);
-        System.out.println(knihaSluzba.nacistKnihyRokVydani(1845));
+        //System.out.println(knihaSluzba.nacistKnihyAutora("Karel Čapek"));
+        knihaSluzba.nacistKnihyAutora("Karel Čapek");
+        for (Kniha kniha : knihaSluzba.nacistKnihyAutora("Karel Čapek")) {
+            System.out.println(kniha.getNazev());
+        }
 
-
+        //System.out.println(knihaSluzba.nacistKnihyRokVydani(1845));
+        knihaSluzba.nacistKnihyRokVydani(1845);
+        for (Kniha kniha : knihaSluzba.nacistKnihyRokVydani(1845)) {
+            System.out.println(kniha.getAutor() + " " + kniha.getNazev());
+        }
     }
 }
