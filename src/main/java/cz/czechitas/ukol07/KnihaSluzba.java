@@ -30,7 +30,7 @@ public class KnihaSluzba {
         }
     }
 
-    public List<Kniha> nacistSeznamKnih () {
+    public List<Kniha> nacistSeznamKnih() {
         //List<Kniha> seznamKnih = new ArrayList<>();
         return knihy; //nebo return knihy;
     }
